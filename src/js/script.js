@@ -1,4 +1,4 @@
-/* Code sur le navigateur:
+/* Code effectuer sur la console du navigateur web:
 nav = docuement.querySelector('.menu')
 nav.ariaHidden = "false"
 
@@ -19,4 +19,6 @@ toggle.addEventListener('click', () => {
     // Mise à jour des attributs ARIA pour accessibilité
     nav.setAttribute('aria-hidden', isOpen);
     toggle.setAttribute('aria-expanded', isClosed);
+    // Ajout de la classe noscroll à body
+    document.body.classList.toggle('noscroll', isOpen);
 });
